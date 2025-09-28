@@ -76,3 +76,9 @@
 .content-sidebar__footer a:hover {
   color: rgb(255, 73, 73);
 }
+
+@media (max-width: 768px) {
+  .content-sidebar {
+    width: 100%;
+  }
+}
