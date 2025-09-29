@@ -7,7 +7,7 @@ export const FILMS: Film[] = [
     original: 'The Martian 2015',
     category: 'Фантастика, приключения',
     rating: 7.8,
-    link: './film.html',
+    link: './film',
     image: './images/film.png',
   },
   {
@@ -16,7 +16,7 @@ export const FILMS: Film[] = [
     original: 'The Martian 2015',
     category: 'Фантастика, приключения',
     rating: 7.8,
-    link: './film.html',
+    link: './film',
     image: './images/film.png',
   },
   {
@@ -25,7 +25,7 @@ export const FILMS: Film[] = [
     original: 'The Martian 2015',
     category: 'Фантастика, приключения',
     rating: 7.8,
-    link: './film.html',
+    link: './film',
     image: './images/film.png',
   },
 ];
