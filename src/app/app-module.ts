@@ -10,11 +10,12 @@ import { Search } from './components/search/search';
 import { CatalogPage } from './pages/catalog-page/catalog-page';
 import { FilmPage } from './pages/film-page/film-page';
 import { NotFound } from './pages/not-found/not-found';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [App, Card, Header, Sidebar, Search, CatalogPage, FilmPage, NotFound],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [provideBrowserGlobalErrorListeners()],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/Netclicks/' }],
   bootstrap: [App],
 })
 export class AppModule {}
