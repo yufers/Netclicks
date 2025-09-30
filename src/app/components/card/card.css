@@ -1,5 +1,9 @@
-.content-cards__item {
+:host {
   width: calc((100% - (30px * 2)) / 3);
+}
+
+.content-cards__item {
+  width: 100%;
   text-decoration: none;
 }
 
@@ -58,26 +62,13 @@
 }
 
 @media (max-width: 991px) {
-  .content-cards__item {
+  :host {
     width: calc((100% - (30px * 1)) / 2);
   }
 }
 
 @media (max-width: 480px) {
-  .content-cards__item {
+  :host {
     width: 100%;
-    min-width: 100%;
-  }
-}
-
-:host {  
-  width: calc((100% - 60px) / 3);  
-
-  @media (max-width: 991px) {    
-    width: calc((100% - 30px) / 2);  
-  }  
-  @media (max-width: 480px) {    
-    width: 100%;    
-    min-width: 100%;  
   }
 }
