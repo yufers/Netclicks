@@ -1,6 +1,4 @@
-import { Component, signal } from '@angular/core';
-import { Film } from './models/film.model';
-import { FILMS } from './constants/film.constants';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +6,4 @@ import { FILMS } from './constants/film.constants';
   standalone: false,
   styleUrl: './app.css',
 })
-export class App {
-  public films: Film[] = FILMS
-}
+export class App {}
