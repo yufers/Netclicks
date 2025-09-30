@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../../models/film.model';
 import { FILMS } from '../../constants/film.constants';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FilmsService } from '../../services/films.service';
 
 @Component({
   selector: 'app-film-page',
@@ -10,14 +11,19 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
   styleUrl: './film-page.css',
 })
 export class FilmPage implements OnInit {
-  public films: Film[] = FILMS;
+  public films: Film[] = [];
   public film!: Film;
 
-  constructor(private _route: ActivatedRoute, private _router: Router) {}
+  constructor(
+    private _route: ActivatedRoute,
+    private _router: Router,
+    private _filmsService: FilmsService
+  ) {}
 
   ngOnInit(): void {
     const id = this._route.snapshot.paramMap.get('id');
 
+    this.films = this._filmsService.getFilms;
     this._initFilm(Number(id));
   }
 

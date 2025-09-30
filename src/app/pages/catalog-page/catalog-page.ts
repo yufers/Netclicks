@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Film } from '../../models/film.model';
 import { FILMS } from '../../constants/film.constants';
+import { FilmsService } from '../../services/films.service';
 
 @Component({
   selector: 'app-catalog-page',
@@ -9,5 +10,11 @@ import { FILMS } from '../../constants/film.constants';
   styleUrl: './catalog-page.css',
 })
 export class CatalogPage {
-  public films: Film[] = FILMS;
+  // public films: Film[] = FILMS;
+
+  constructor(private _filmsService: FilmsService) {}
+
+  public get films(): Film[] {
+    return this._filmsService.getFilteredFilms;
+  }
 }
